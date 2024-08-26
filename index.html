@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatitos Aleatorios | Michis App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>🐾 Michis App 🐾</h1>
+  </header>
+
+  <main>
+    <!-- Sección de Michis Aleatorios -->
+    <section id="randomMichis">
+      <h2>Michis Aleatorios</h2>
+
+      <div class="michi-container">
+        <article class="michi-card">
+          <img id="img1" class="michi-image" alt="Foto gatito aleatorio">
+          <button id="btn1" class="btn-primary">
+            Guardar en favoritos
+          </button>
+        </article>
+
+        <article class="michi-card">
+          <img id="img2" class="michi-image" alt="Foto gatito aleatorio">
+          <button id="btn2" class="btn-primary">
+            Guardar en favoritos
+          </button>
+        </article>
+      </div>
+
+      <div class="center-button">
+        <button onclick="loadRandomMichis()" class="btn-secondary">Recargar Michis</button>
+      </div>
+    </section>
+
+    <!-- Sección de Subida de Michis -->
+    <section id="uploadingMichi">
+      <h2>Sube la foto de tu Michi</h2>
+
+      <form id="uploadForm">
+        <input type="file" name="file" id="file" class="input-file" onchange="previewImage()">
+        <img id="imagePreview" class="image-preview" alt="Vista previa">
+        <button type="button" onclick="uploadMichiFoto()" id="uploadBtn" class="btn-primary">Subir Michi</button>
+        <span id="upload"></span>
+      </form>
+    </section>
+
+    <!-- Sección de Michis Favoritos -->
+    <section id="favoriteMichis">
+      <div class="michi-grid"></div>
+      <!-- Los elementos deben estar directamente dentro de la cuadrícula -->
+      <!-- Añadir más artículos según sea necesario -->
+    </section>
+
+    <span id="error" class="error-message"></span>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

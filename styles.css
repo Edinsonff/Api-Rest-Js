@@ -1,0 +1,262 @@
+/* Variables */
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #FF4500;
+    --background-color: #FFF8DC;
+    --text-color: #2F4F4F;
+    --card-bg-color: #FFFFFF;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Global Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--text-color);
+  }
+  
+  main {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Michi Cards - Estilo en Filas */
+  .michi-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .michi-card {
+    background-color: var(--card-bg-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: 100%;
+    flex-basis: 48%;
+  }
+  
+  .michi-image {
+    width: 100%;
+    height: 200px; /* Fijar la altura para todas las imágenes */
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio disponible */
+  }
+  
+  /* Botón centrado */
+  .center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilo de los Botones */
+  .btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+    transform: scale(1.05);
+  }
+  
+  .btn-secondary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: scale(1.05);
+  }
+  
+  .btn-remove {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+  }
+  
+  .btn-remove:hover {
+    background-color: darken(#dc3545, 10%);
+    transform: scale(1.05);
+  }
+  
+  /* Upload Form */
+  #uploadForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-file {
+    margin-bottom: 15px;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+  }
+  
+/* Michi Cards - Estilo en Filas */
+.michi-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .michi-card {
+    background-color: var(--card-bg-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: 100%;
+    flex-basis: 48%;
+    height: 300px; /* Fijar altura consistente para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .michi-image {
+    width: 100%;
+    height: 200px; /* Fijar la altura para todas las imágenes */
+    border-radius: var(--border-radius);
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio disponible */
+  }
+  
+  /* Michi Favoritos en Cuadrícula */
+  .michi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+    gap: 20px; /* Espacio entre los elementos */
+  }
+  
+  .michi-card {
+    background-color: var(--card-bg-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px; /* Fijar altura consistente para todas las tarjetas */
+  }
+  
+  .michi-image {
+    width: 100%;
+    height: 200px; /* Fijar la altura para todas las imágenes en la cuadrícula */
+    border-radius: var(--border-radius);
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio disponible */
+  }
+  
+  .btn-remove {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+  }  
+  
+  #favoriteMichis {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+  }
+  
+  #favoriteMichis h2 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  #uploadingMichi h2 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  #randomMichis h2 {
+    text-align: center;
+    width: 100%;
+  }
